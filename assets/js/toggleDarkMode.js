@@ -32,17 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (this.classList.contains('active')) {
 			body.classList.add('dark-mode');
 			//Save user preference as a cookie
-			cookieStorage.setCookie('nasioNightMode', 'true', 2628000000, '/');
+			cookieStorage.setCookie('lodhilifeNightMode', 'true', 2628000000, '/');
 		} else {
 			body.classList.remove('dark-mode');
 			setTimeout(function() {
-				cookieStorage.removeCookie('nasioNightMode');
+				cookieStorage.removeCookie('lodhilifeNightMode');
 			}, 100);
 		}
 	})
 
 	//Check Storage. Keep user preference on page reload
-	if (cookieStorage.getCookie('nasioNightMode')) {
+	if (cookieStorage.getCookie('lodhilifeNightMode')) {
 		//body.classList.add('dark-mode');
 		switcher.classList.add('active');
 	}

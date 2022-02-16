@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @since 1.0
  * @version 1.2
  */
@@ -29,8 +29,8 @@
 			
 			echo '<div class="post-meta">';
 				if ( is_single() ) {
-					nasio_posted_on();
-					nasio_get_category();
+					lodhilife_posted_on();
+					lodhilife_get_category();
 				}
 			
 			echo '</div><!-- .post-meta -->';

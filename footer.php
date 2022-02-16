@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @version 1.0
  */
 

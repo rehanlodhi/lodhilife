@@ -2,9 +2,9 @@
 
 //Allow users to change theme colors through WordPress Customizer
 
-function nasio_customize_colors( $wp_customize ) {
+function lodhilife_customize_colors( $wp_customize ) {
 
-	$wp_customize->get_section('colors')->description = esc_html__( 'Customze the colors of the light theme mode. To customize the dark theme mode, go to the Night Mode section.', 'nasio');
+	$wp_customize->get_section('colors')->description = esc_html__( 'Customze the colors of the light theme mode. To customize the dark theme mode, go to the Night Mode section.', 'lodhilife');
 	
 	//Social menu background color
 	$wp_customize->add_setting('header_background_color', array(
@@ -12,7 +12,7 @@ function nasio_customize_colors( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_hex_color',
 	   ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background_color', array(
-	   'label'   => __('Header Background Color', 'nasio'),
+	   'label'   => __('Header Background Color', 'lodhilife'),
 	   'section' => 'colors',
 		)));
 
@@ -22,7 +22,7 @@ function nasio_customize_colors( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'menu_text_color', array(
-		'label'        => __( 'Top Menu Text Color', 'nasio' ),
+		'label'        => __( 'Top Menu Text Color', 'lodhilife' ),
 		'section'    => 'colors',
 	) ) );
 
@@ -33,14 +33,14 @@ function nasio_customize_colors( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'headings_textcolor', array(
-		'label'        => __( 'Headings Text Color', 'nasio' ),
+		'label'        => __( 'Headings Text Color', 'lodhilife' ),
         'section'    => 'colors',
 	) ) );
 
 }
-add_action( 'customize_register', 'nasio_customize_colors' );
+add_action( 'customize_register', 'lodhilife_customize_colors' );
 
-function nasio_customize_css() {
+function lodhilife_customize_css() {
 	$header_text_color = get_theme_mod('header_textcolor');
 	$default_text_color = '333333';
     ?>
@@ -63,17 +63,17 @@ function nasio_customize_css() {
     </style>
     <?php
 }
-add_action( 'wp_head', 'nasio_customize_css');
+add_action( 'wp_head', 'lodhilife_customize_css');
 
 /*
 **Allow users to change page layout (Right sidebar or Fullwidth) via Theme Customizer
 */
 
-function nasio_register_full_width_customizer($wp_customize) {
+function lodhilife_register_full_width_customizer($wp_customize) {
 
     $wp_customize->add_section('layout_options', array(
-        'title' => esc_html(__('Page Layout', 'nasio')),
-        'description' => esc_html(__('Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'nasio' )
+        'title' => esc_html(__('Page Layout', 'lodhilife')),
+        'description' => esc_html(__('Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'lodhilife' )
     )));
 
     $wp_customize->add_setting('page_layout', array(
@@ -85,22 +85,22 @@ function nasio_register_full_width_customizer($wp_customize) {
         $wp_customize,
         'layout_options',
         array(
-            'label' => esc_html(__('Page Layout', 'nasio')),
+            'label' => esc_html(__('Page Layout', 'lodhilife')),
             'section' => 'layout_options',
             'settings' => 'page_layout',
             'type' => 'radio',
             'choices' => array(
-                'one' => esc_html(__('Right Sidebar', 'nasio')),
-                'two' => esc_html(__('Full-width', 'nasio')),
+                'one' => esc_html(__('Right Sidebar', 'lodhilife')),
+                'two' => esc_html(__('Full-width', 'lodhilife')),
                 )
             )
         )
     );
 }
 
-add_action('customize_register', 'nasio_register_full_width_customizer');
+add_action('customize_register', 'lodhilife_register_full_width_customizer');
 
-function nasio_full_width_css() {
+function lodhilife_full_width_css() {
 
     $layout = get_theme_mod('page_layout');
 
@@ -129,15 +129,15 @@ function nasio_full_width_css() {
 
     <?php endif;
 }
-add_action('wp_head', 'nasio_full_width_css');
+add_action('wp_head', 'lodhilife_full_width_css');
 
 //Night Mode
 
-function nasio_night_mode_customizer($wp_customize) {
+function lodhilife_night_mode_customizer($wp_customize) {
 
     $wp_customize->add_section('night_mode', array(
-        'title' => esc_html(__('Night Mode', 'nasio')),
-        'description' => esc_html(__('Customize the dark theme mode. For additional customization, you can use the "dark-mode" body class and add the code to the Additional Css tab', 'nasio' )
+        'title' => esc_html(__('Night Mode', 'lodhilife')),
+        'description' => esc_html(__('Customize the dark theme mode. For additional customization, you can use the "dark-mode" body class and add the code to the Additional Css tab', 'lodhilife' )
 	)));
 	
 	//Enable Dark Mode 
@@ -152,9 +152,9 @@ function nasio_night_mode_customizer($wp_customize) {
     $wp_customize->add_control(
         'enable_dark_mode',
         array(
-            'label' => esc_html__('Enable Dark Mode', 'nasio'),
+            'label' => esc_html__('Enable Dark Mode', 'lodhilife'),
             'section' => 'night_mode',
-            'description' => esc_html__('Enable site visitors to switch to dark theme mode.', 'nasio'),
+            'description' => esc_html__('Enable site visitors to switch to dark theme mode.', 'lodhilife'),
             'type' => 'checkbox',
         )
 	);
@@ -166,14 +166,14 @@ function nasio_night_mode_customizer($wp_customize) {
 		'sanitize_callback' => 'sanitize_hex_color',
 	   ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'dark_mode_background_color', array(
-	   'label'   => __('Background', 'nasio'),
+	   'label'   => __('Background', 'lodhilife'),
 	   'section' => 'night_mode'
 		)));
 }
 
-add_action('customize_register', 'nasio_night_mode_customizer');
+add_action('customize_register', 'lodhilife_night_mode_customizer');
 
-function nasio_customize_night_mode_css() {
+function lodhilife_customize_night_mode_css() {
     ?>
 	
 	<style type="text/css">
@@ -188,13 +188,13 @@ function nasio_customize_night_mode_css() {
 	<?php
 }
 
-add_action( 'wp_head', 'nasio_customize_night_mode_css');
+add_action( 'wp_head', 'lodhilife_customize_night_mode_css');
 
 
 /**
 * Hide default logo
 */
-function nasio_default_logo_settings($wp_customize) {
+function lodhilife_default_logo_settings($wp_customize) {
 
 	if (function_exists('the_custom_logo')) :
 	
@@ -209,7 +209,7 @@ function nasio_default_logo_settings($wp_customize) {
 		$wp_customize->add_control(
 			'default_theme_logo',
 			array(
-				'label' => esc_html__('Show Default Theme Logo', 'nasio'),
+				'label' => esc_html__('Show Default Theme Logo', 'lodhilife'),
 				'section' => 'title_tagline',
 				'type' => 'checkbox',
 			)
@@ -219,9 +219,9 @@ function nasio_default_logo_settings($wp_customize) {
 
 }
 
-add_action('customize_register', 'nasio_default_logo_settings');
+add_action('customize_register', 'lodhilife_default_logo_settings');
 
-function nasio_customize_default_theme_logo_css() {
+function lodhilife_customize_default_theme_logo_css() {
 
 	$isDefaultLogo = get_theme_mod('default_theme_logo', 1)? 'inline': 'none';
     ?>
@@ -236,4 +236,4 @@ function nasio_customize_default_theme_logo_css() {
 
 }
 
-add_action( 'wp_head', 'nasio_customize_default_theme_logo_css');
+add_action( 'wp_head', 'lodhilife_customize_default_theme_logo_css');

@@ -3,7 +3,7 @@
  * Displays footer site info
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @since 1.0
  * @version 1.0
  */
@@ -21,11 +21,11 @@
     
     <?php else : ?>
             <a href="<?php echo esc_url( 'https://yonkov.github.io/' ); ?>" class="imprint">
-                <?php printf( __( 'Designed by %s', 'nasio' ), 'Atanas Yonkov' );?>
+                <?php printf( __( 'Designed by %s', 'lodhilife' ), 'Atanas Yonkov' );?>
             </a>
             <span> || </span>
             <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>" class="imprint">
-                <?php printf( __( 'Powered by %s', 'nasio' ), 'WordPress' ); ?>
+                <?php printf( __( 'Powered by %s', 'lodhilife' ), 'WordPress' ); ?>
             </a>
     <?php endif ?>
     </div>

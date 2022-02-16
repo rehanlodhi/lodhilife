@@ -1,17 +1,17 @@
 <?php
 /**
- * Nasio functions and definitions
+ * Lodhi Life functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @version 1.0
  */
 
-function nasio_setup() {
+function lodhilife_setup() {
 	// Make theme available for translation.
-	load_theme_textdomain( 'nasio', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'lodhilife', get_template_directory() . '/languages' );
 	// Let WordPress manage the document title.
 	add_theme_support( 'title-tag' );
 	// Enable support for Post Thumbnails on posts and pages.
@@ -20,8 +20,8 @@ function nasio_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(
 		array(
-			'top'    => __( 'Top Menu', 'nasio' ),
-			'social' => __( 'Social Links Menu', 'nasio' ),
+			'top'    => __( 'Top Menu', 'lodhilife' ),
+			'social' => __( 'Social Links Menu', 'lodhilife' ),
 		)
 	);
 
@@ -55,20 +55,20 @@ function nasio_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'nasio_setup' );
+add_action( 'after_setup_theme', 'lodhilife_setup' );
 
 if ( isset( $content_width ) ) {
-	$nasio_content_width = 900;
+	$lodhilife_content_width = 900;
 }
 
 // Register widget area.
 
-function nasio_widgets_init() {
+function lodhilife_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Right Sidebar', 'nasio' ),
+			'name'          => __( 'Right Sidebar', 'lodhilife' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'nasio' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'lodhilife' ),
 			'before_widget' => '<section id="%1$s" class="sidebar-box">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="heading">',
@@ -78,9 +78,9 @@ function nasio_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer 1', 'nasio' ),
+			'name'          => __( 'Footer 1', 'lodhilife' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Add 1 widget here to appear in your footer.', 'nasio' ),
+			'description'   => __( 'Add 1 widget here to appear in your footer.', 'lodhilife' ),
 			'before_widget' => '<section id="%1$s" class="col-footer">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="heading">',
@@ -90,9 +90,9 @@ function nasio_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer 2', 'nasio' ),
+			'name'          => __( 'Footer 2', 'lodhilife' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Add 2 widgets here to appear in your footer.', 'nasio' ),
+			'description'   => __( 'Add 2 widgets here to appear in your footer.', 'lodhilife' ),
 			'before_widget' => '<section id="%1$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -101,56 +101,56 @@ function nasio_widgets_init() {
 	);
 
 }
-add_action( 'widgets_init', 'nasio_widgets_init' );
+add_action( 'widgets_init', 'lodhilife_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 
-function nasio_styles() {
+function lodhilife_styles() {
 	// Theme Navigation
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '', true );
 	// Toggle Dark Theme Mode
 	wp_enqueue_script( 'dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.min.js', array(), '', true );
 	// Theme stylesheet.
-	wp_enqueue_style( 'nasio-css', get_template_directory_uri() . '/style.min.css', '', '2.3.0' );
+	wp_enqueue_style( 'lodhilife-css', get_template_directory_uri() . '/style.min.css', '', '2.3.0' );
 }
 
-add_action( 'wp_enqueue_scripts', 'nasio_styles' );
+add_action( 'wp_enqueue_scripts', 'lodhilife_styles' );
 
 /**
  * Enqueue fonts to the footer for better peformance
  */
 
-function nasio_fonts() {
+function lodhilife_fonts() {
 	// Font Awesome
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/public/css/font-awesome.min.css' );
 	// Add google fonts
 	wp_enqueue_style( 'Merriweather', '//fonts.googleapis.com/css?family=Merriweather&display=swap' );
 	wp_enqueue_style( 'OpenSans', '//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap' );
 }
-add_action( 'wp_footer', 'nasio_fonts' );
+add_action( 'wp_footer', 'lodhilife_fonts' );
 
 // Remove default width and height attributes from image tags
 
-function nasio_remove_image_size_attributes( $html ) {
+function lodhilife_remove_image_size_attributes( $html ) {
 	return preg_replace( '/(width|height)="\d*"/', '', $html );
 }
 	// Remove image size attributes from post thumbnails
-	add_filter( 'post_thumbnail_html', 'nasio_remove_image_size_attributes' );
+	add_filter( 'post_thumbnail_html', 'lodhilife_remove_image_size_attributes' );
 
 	// Remove image size attributes from images added to a WordPress post
-	add_filter( 'image_send_to_editor', 'nasio_remove_image_size_attributes' );
+	add_filter( 'image_send_to_editor', 'lodhilife_remove_image_size_attributes' );
 
 
-function nasio_front_page_template( $template ) {
+function lodhilife_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
-add_filter( 'frontpage_template', 'nasio_front_page_template' );
+add_filter( 'frontpage_template', 'lodhilife_front_page_template' );
 
-function nasio_posted_on() {
+function lodhilife_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-			echo '<span class="featured-post">' . __( 'Sticky', 'nasio' ) . '</span>';
+			echo '<span class="featured-post">' . __( 'Sticky', 'lodhilife' ) . '</span>';
 	}
 
 	// Set up and print post meta information.
@@ -164,13 +164,13 @@ function nasio_posted_on() {
 	);
 }
 
-function nasio_get_category() {
+function lodhilife_get_category() {
 	$categories = get_the_category();
 	$separator  = ' ';
 	$output     = '';
 	if ( ! empty( $categories ) ) {
 		foreach ( $categories as $category ) {
-			$output .= '<span><a class="category-meta-field" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'nasio' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></span>' . $separator;
+			$output .= '<span><a class="category-meta-field" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'lodhilife' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></span>' . $separator;
 		}
 		echo trim( $output, $separator );
 	}
@@ -186,7 +186,7 @@ function nasio_get_category() {
  *
  * @ref https://www.w3.org/WAI/tutorials/menus/flyout/
  */
-function nasio_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+function lodhilife_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
 	$item_has_children = in_array( 'menu-item-has-children', $item->classes );
 	if ( $item_has_children ) {
@@ -196,7 +196,7 @@ function nasio_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 	return $atts;
 }
 
-add_filter( 'nav_menu_link_attributes', 'nasio_nav_menu_link_attributes', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'lodhilife_nav_menu_link_attributes', 10, 4 );
 
 /**
  * Extend Recent Posts Widget
@@ -204,7 +204,7 @@ add_filter( 'nav_menu_link_attributes', 'nasio_nav_menu_link_attributes', 10, 4 
  * Adds Images to the default WordPress Recent Posts Widget
  */
 
-class Nasio_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
+class Lodhi Life_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 
 	function widget( $args, $instance ) {
 
@@ -212,7 +212,7 @@ class Nasio_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 			$args['widget_id'] = $this->id;
 		}
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'nasio' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'lodhilife' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -284,14 +284,14 @@ class Nasio_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 	}
 }
 
-function nasio_recent_widget_registration() {
-	register_widget( 'Nasio_Recent_Posts_Widget' );
+function lodhilife_recent_widget_registration() {
+	register_widget( 'Lodhi Life_Recent_Posts_Widget' );
 }
-add_action( 'widgets_init', 'nasio_recent_widget_registration' );
+add_action( 'widgets_init', 'lodhilife_recent_widget_registration' );
 
 /* Modify comments markup*/
 
-function nasio_modify_comment_output( $comment, $depth, $args ) {
+function lodhilife_modify_comment_output( $comment, $depth, $args ) {
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 	?>
 <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
@@ -306,7 +306,7 @@ function nasio_modify_comment_output( $comment, $depth, $args ) {
 				<?php
 				/* translators: %s: comment author link */
 				printf(
-					__( '%s <span class="says">says:</span>', 'nasio' ),
+					__( '%s <span class="says">says:</span>', 'lodhilife' ),
 					sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
 				);
 				?>
@@ -316,15 +316,15 @@ function nasio_modify_comment_output( $comment, $depth, $args ) {
 				<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
 					<time datetime="<?php comment_time( 'c' ); ?>">
 						<?php
-						printf( _x( '%s ago', '%s = human-readable time difference', 'nasio' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+						printf( _x( '%s ago', '%s = human-readable time difference', 'lodhilife' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
 						?>
 					</time>
 				</a>
-				<?php edit_comment_link( __( 'edit', 'nasio' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_comment_link( __( 'edit', 'lodhilife' ), '<span class="edit-link">', '</span>' ); ?>
 			</div><!-- .comment-metadata -->
 
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-			<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'nasio' ); ?></p>
+			<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'lodhilife' ); ?></p>
 			<?php endif; ?>
 		</footer><!-- .comment-meta -->
 
@@ -336,14 +336,14 @@ function nasio_modify_comment_output( $comment, $depth, $args ) {
 	<?php
 }
 
-wp_list_comments( 'callback=nasio_modify_comment_output' );
+wp_list_comments( 'callback=lodhilife_modify_comment_output' );
 
-function nasio_truncate_string( $phrase, $max_words ) {
+function lodhilife_truncate_string( $phrase, $max_words ) {
 
 	$phrase_array = explode( ' ', $phrase );
 
 	if ( count( $phrase_array ) > $max_words && $max_words > 0 ) {
-		$phrase = implode( ' ', array_slice( $phrase_array, 0, $max_words ) ) . __( '...', 'nasio' );
+		$phrase = implode( ' ', array_slice( $phrase_array, 0, $max_words ) ) . __( '...', 'lodhilife' );
 	}
 
 	return $phrase;
@@ -362,7 +362,7 @@ if ( function_exists( 'get_parent_theme_file_path' ) ) { // Since WordPress 4.7
 }
 
 // PAGINATION
-function nasio_numeric_posts_nav() {
+function lodhilife_numeric_posts_nav() {
 
 	if ( is_singular() ) {
 		return;
@@ -444,18 +444,18 @@ function nasio_numeric_posts_nav() {
  * @link https://wordpress.org/plugins/wp-night-mode/
  */
 
-function nasio_dark_mode( $classes ) {
+function lodhilife_dark_mode( $classes ) {
 
-	$nasio_night_mode = isset( $_COOKIE['nasioNightMode'] ) ? $_COOKIE['nasioNightMode'] : '';
+	$lodhilife_night_mode = isset( $_COOKIE['lodhilifeNightMode'] ) ? $_COOKIE['lodhilifeNightMode'] : '';
 
-	if ( $nasio_night_mode !== '' ) {
+	if ( $lodhilife_night_mode !== '' ) {
 		// Add 'dark-mode' body class
 			return array_merge( $classes, array( 'dark-mode' ) );
 	}
 	return $classes;
 }
 
-add_filter( 'body_class', 'nasio_dark_mode' );
+add_filter( 'body_class', 'lodhilife_dark_mode' );
 
 /**
  * Facebook Open Graph
@@ -464,10 +464,10 @@ add_filter( 'body_class', 'nasio_dark_mode' );
  * @link https://stackoverflow.com/questions/28735174/wordpress-ogimage-featured-image
  */
 
-function nasio_fb_open_graph() {
+function lodhilife_fb_open_graph() {
 	if ( is_single() && has_post_thumbnail() ) {
 		echo '<meta property="og:image" content="' . esc_attr( get_the_post_thumbnail_url( get_the_ID() ) ) . '" />';
 	}
 }
 
-add_action( 'wp_head', 'nasio_fb_open_graph' );
+add_action( 'wp_head', 'lodhilife_fb_open_graph' );

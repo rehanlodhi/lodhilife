@@ -1,15 +1,15 @@
-# Nasio
+# Lodhi Life
 
-Nasio is an extremely lightweight WordPress theme without any frameworks developed by Atanas Yonkov in 2020. Ideal for blogs and portfolio websites. Very easy to set up even for people without coding experience thanks to its extensive documentation and generous theme options. Nasio is optimized for speed and high performance in Google search results. With its minimalistic and clean design, its divine purpose is to showcase high quality content.
+Lodhi Life is an extremely lightweight WordPress theme without any frameworks developed by Atanas Yonkov in 2020. Ideal for blogs and portfolio websites. Very easy to set up even for people without coding experience thanks to its extensive documentation and generous theme options. Lodhi Life is optimized for speed and high performance in Google search results. With its minimalistic and clean design, its divine purpose is to showcase high quality content.
 
-Nasio does not use Bootstrap or any other css framework (only custom css!) to provide first-class user experience. As a result, the whole theme's zip file is less than 300KB. It has fully responsive 3-column grid layout. It supports nested menu items. Option to use a static Homepage. Beautiful pagination. Option to add custom header, custom logo, site icon and change the theme accent colors from the customizer. Option to switch between right sidebar layout and full-width layout. The visitors can choose between light and dark theme mode and change their preferences any time.
+Lodhi Life does not use Bootstrap or any other css framework (only custom css!) to provide first-class user experience. As a result, the whole theme's zip file is less than 300KB. It has fully responsive 3-column grid layout. It supports nested menu items. Option to use a static Homepage. Beautiful pagination. Option to add custom header, custom logo, site icon and change the theme accent colors from the customizer. Option to switch between right sidebar layout and full-width layout. The visitors can choose between light and dark theme mode and change their preferences any time.
 
 The theme extends the Recent Posts widget to include beautiful post thumbnail images in the right sidebar. Posts without a featured image are displayed with a default thumbnail. Optimized css and font delivery for better performance. Static files (css and js) are minifed. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 Live example: http://merrystories.com/
 
 **Table of Contents**
-- [Nasio](#nasio)
+- [Lodhi Life](#lodhilife)
 - [Features](#features)
   - [Lightweight](#lightweight)
   - [Responsive](#responsive)
@@ -39,14 +39,14 @@ Live example: http://merrystories.com/
 The theme is optimized for speed. It loads all the fonts and most of the css in the footer. In this way it limits the render blocking of css and other static resources. All the images are highly optimized.
 
 ## Responsive
-Nasio has been fully optimised for small screen display. Your content will look beautiful whether it's viewed on a desktop, a tablet or a smartphone.
+Lodhi Life has been fully optimised for small screen display. Your content will look beautiful whether it's viewed on a desktop, a tablet or a smartphone.
 
 ## Translation-ready
-Nasio is a translation-ready theme and it comes with two default languages - English and Bulgarian. You can easily use poedit or any other translation plugin to translate it to any language you need.
+Lodhi Life is a translation-ready theme and it comes with two default languages - English and Bulgarian. You can easily use poedit or any other translation plugin to translate it to any language you need.
 
 ## RTL Language support
 
-Since v. 2.0.2, Nasio fully supports languages that are read from right to left. It automatically rotates the layout if the user switches to any rtl language. You only need to pick a site language from Settings> General> Site Language and the rest is automatically done for you.
+Since v. 2.0.2, Lodhi Life fully supports languages that are read from right to left. It automatically rotates the layout if the user switches to any rtl language. You only need to pick a site language from Settings> General> Site Language and the rest is automatically done for you.
 
 ## Light and Dark Mode
 Since v. 2.1.1, the theme enables the website visitors to switch between light and dark theme mode to improve the readability of text, images and videos. Reading website content at night time can be difficult. Enable the dark mode switcher to help your visitors to read more articles, spend more time on your website and protect their eyes from being hurt.
@@ -65,7 +65,7 @@ Now, let's set up some widgets in the right sidebar and remove the default ones!
 ```html
 <div class="bio text-center">
     <!--Add your image url inside the src quotation marks -->
-    <img src="/wp-content/themes/nasio/images/wordpress-wizard.jpg" alt="webmaster pic" class="img-fluid" />
+    <img src="/wp-content/themes/lodhilife/images/wordpress-wizard.jpg" alt="webmaster pic" class="img-fluid" />
     <div class="bio-body">
         <!--Add your name inside the h2 tags-->
         <h2>George Doe</h2>
@@ -103,7 +103,7 @@ Since version 1.04, the the theme support full-width layout out of the box. You 
 <!-- About me widget-->
 <h3 class="heading">About me</h3>
 <p class="page-title">
-    <img src="/wp-content/themes/nasio/images/about.jpg" alt="placeholder" class="img-fluid" />
+    <img src="/wp-content/themes/lodhilife/images/about.jpg" alt="placeholder" class="img-fluid" />
 </p>
 <p>
     This is a good place to introduce yourself. Write about your work, hobbies and passion.
@@ -210,7 +210,7 @@ body.dark-mode a {
 This section is for more advanced users who want to write custom css to override the default theme's styles.
 
 ## Further Customisation
-If you want to customise Nasio beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes). Here is a [premade child theme](https://github.com/yonkov/nasio-child-theme) of the Nasio theme that you can use to get started.
+If you want to customise Lodhi Life beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes). Here is a [premade child theme](https://github.com/yonkov/lodhilife-child-theme) of the Lodhi Life theme that you can use to get started.
 
 # License
 This theme, like WordPress, is licensed under the GPL.

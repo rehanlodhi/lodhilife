@@ -2,8 +2,8 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Nasio
- * @since Nasio 1.0
+ * @package Lodhi Life
+ * @since Lodhi Life 1.0
  */
 ?>
 
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <h2 class="page-title"><?php _e('Search Results', 'nasio')?></h2>
+                    <h2 class="page-title"><?php _e('Search Results', 'lodhilife')?></h2>
                 </div>
             </div>
             <div class="row blog-entries">
@@ -37,7 +37,7 @@
 
                 else : ?>
 
-                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'nasio' ); ?>
+                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lodhilife' ); ?>
                         </p>
                         <?php
                         get_search_form();

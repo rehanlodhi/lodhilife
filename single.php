@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @since 1.0
  * @version 1.0
  */

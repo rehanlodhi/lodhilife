@@ -7,7 +7,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @since 1.0
  * @version 1.0
  */
@@ -20,13 +20,13 @@
         <?php if ( 'post' === get_post_type() ) : ?>
         <div class="entry-meta">
             <?php
-				//echo nasio_time_link();
-				//nasio_edit_link();
+				//echo lodhilife_time_link();
+				//lodhilife_edit_link();
 				?>
         </div><!-- .entry-meta -->
         <?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
         <div class="entry-meta">
-            <?php //nasio_edit_link(); ?>
+            <?php //lodhilife_edit_link(); ?>
         </div><!-- .entry-meta -->
         <?php endif; ?>
 

@@ -3,14 +3,14 @@
  * Displays top navigation
  *
  * @package WordPress
- * @subpackage Nasio
+ * @subpackage Lodhi Life
  * @since 1.0
  * @version 1.0
  */
 
 ?>
 <nav id="site-navigation" class="navbar navbar-expand-lg nav" role="navigation"
-    aria-label="<?php esc_attr_e( 'Top Menu', 'nasio' ); ?>">
+    aria-label="<?php esc_attr_e( 'Top Menu', 'lodhilife' ); ?>">
     <div class="container">
         <div class="navbar-collapse collapse" id="navbarMenu">
             <?php wp_nav_menu( array(
