@@ -1,17 +1,36 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Nasio
+ * @since 1.0
+ * @version 1.0
+ */
+?>
+
+
+<?php
+
+get_header(); ?>
     <!-- Start of main-content -->
     <section id="content" class="site-section">
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <h3 class="page-title"><?php _e( 'Latest Posts', 'nasio'); ?></h3>
+                <?php
+				the_archive_title( '<h2 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			    ?>
                 </div>
             </div>
             <div class="row blog-entries">
                 <div class="main-content">
                     <div class="row">
                         <?php
-                    //Dynamic content here
+                    //Loop posts here
                     if (have_posts() ) :
                         while (have_posts() ) : the_post(); ?>
                         <div class="column<?php echo (is_sticky()) ?  ' sticky' : ''; ?>"> <?php
