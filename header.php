@@ -24,30 +24,6 @@
     <?php if ( function_exists( 'wp_body_open' ) ) { wp_body_open();} /*wp_body_open hook since WordPress 5.2 */ ?>
     <main id="root" class="wrap" >
         <header role="banner">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="social">
-                        <a class="screen-reader-text skip-link" href="#site-navigation"><?php _e( 'Skip to main menu', 'nasio'); ?></a>
-                        <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'nasio'); ?></a>
-                            <?php
-                if ( has_nav_menu( 'social' ) ) : ?>
-                            <nav class="social-navigation" role="navigation"
-                                aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'nasio' ); ?>">
-                                <?php
-                    wp_nav_menu( array(
-                      'theme_location' => 'social',
-                      'menu_class'     => 'social-links-menu',
-                      'depth'          => 1,
-                    ) ); ?>
-                            </nav><!-- .social-navigation -->
-
-                <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="header-wrapper">
                 <div class="row header-image" <?php if ( has_header_image() ) : ?>
                     style="background-image:url(<?php echo header_image(); ?>);" <?php endif ?>>
