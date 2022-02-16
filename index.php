@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <h3 class="page-title"><?php _e( 'Latest Posts', 'lodhilife'); ?></h3>
+                    <h3 class="page-title"><?php _e( 'Latest Posts', 'nasio'); ?></h3>
                 </div>
             </div>
             <div class="row blog-entries">
@@ -31,9 +31,9 @@
                             <?php endif; ?>
                         </div>
                         <?php endwhile;
-                    lodhilife_numeric_posts_nav();
+                    nasio_numeric_posts_nav();
                     else :
-                        _e( 'There are no posts!', 'lodhilife');                
+                        _e( 'There are no posts!', 'nasio');
                     endif;
                     ?>
                     </div>

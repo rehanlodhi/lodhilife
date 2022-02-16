@@ -5,7 +5,7 @@
                 <button type="submit" class="icon fa fa-search"><span
                         class="screen-reader-text"></span></button>
             </label>
-            <input type="search" id="s" class="form-control" placeholder="<?php _e( 'Search', 'lodhilife' ); ?>.."
+            <input type="search" id="s" class="form-control" placeholder="<?php _e( 'Search', 'nasio' ); ?>.."
                 value="<?php echo esc_attr(get_search_query()); ?>" name="s" />
         </div>
     </form>

@@ -1,4 +1,4 @@
-﻿=== Lodhi Life ===
+﻿=== Nasio ===
 Contributors: nravota12
 Requires at least: 4.4
 Tested up to: 5.9
@@ -15,12 +15,12 @@ Extremely lightweight WordPress theme without any frameworks developed by Atanas
 The theme is optimized for speed and better performance in google search results. It does not use Bootstrap or any other css framework (only custom css!) to provide unique and high-quality user experience. 
 It has fully responsive 2-column grid layout. Option to use a static Homepage. Beautiful pagination. Option to add header image, custom logo, site icon and change theme accent colors from the theme customizer. Option to switch between right sidebar layout and full-width layout. 
 The visitors can choose between light and dark theme mode and change their preferences any time. The theme supports nested dropdown sub menus. It extends the Recent Posts widget to include thumbnail images. Posts without a featured image are displayed with a default thumbnail. Optimized for speed. 
-Optimized css and font delivery for better performance. Extremely fast and SEO friendly. Static files (css and js) are minified. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/lodhilife. Live example: http://phototravelworld.com/
+Optimized css and font delivery for better performance. Extremely fast and SEO friendly. Static files (css and js) are minified. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/nasio. Live example: http://phototravelworld.com/
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Lodhi Life in the search form and press the 'Enter' key on your keyboard.
+2. Type in Nasio in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
@@ -28,12 +28,12 @@ Optimized css and font delivery for better performance. Extremely fast and SEO f
 
 = Where can I find theme documentation? =
 
-You can read the Theme Instructions at https://github.com/yonkov/lodhilife in the Readme.md file.
+You can read the Theme Instructions at https://github.com/yonkov/nasio in the Readme.md file.
 
 == Copyright ==
 
-Lodhi Life WordPress Theme, Copyright 2020 Atanas Yonkov
-Lodhi Life is distributed under the terms of the GNU GPL
+Nasio WordPress Theme, Copyright 2020 Atanas Yonkov
+Nasio is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Lodhi Life bundles the following third-party resources:
+Nasio bundles the following third-party resources:
 
 Font Awesome icons, Copyright Dave Gandy
 License: SIL Open Font License, version 1.1.

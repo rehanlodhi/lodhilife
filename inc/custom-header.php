@@ -1,18 +1,18 @@
 <?php
-function lodhilife_custom_header_setup() {
+function nasio_custom_header_setup() {
     $args = array(
         'default-text-color' => '333',
         'width'              => 2000,
 		'height'             => 330,
         'flex-width'         => true,
         'flex-height'        => true,
-        'wp-head-callback'   => 'lodhilife_header_image_css',
+        'wp-head-callback'   => 'nasio_header_image_css',
     );
     add_theme_support( 'custom-header', $args );
 }
-add_action( 'after_setup_theme', 'lodhilife_custom_header_setup' );
+add_action( 'after_setup_theme', 'nasio_custom_header_setup' );
 
-function lodhilife_header_image_css() {
+function nasio_header_image_css() {
 
     $header_text_color = get_header_textcolor();
     $height = get_theme_mod( 'header-background-height', '330px' );

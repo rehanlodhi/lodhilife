@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Lodhi Life
+ * @subpackage Nasio
  * @since 1.0
  * @version 1.0
  */
@@ -50,9 +50,9 @@ get_header(); ?>
                             <?php endif; ?>
                         </div>
                         <?php endwhile;
-                    lodhilife_numeric_posts_nav();
+                    nasio_numeric_posts_nav();
                     else :
-                        _e( 'There are no posts!', 'lodhilife');                
+                        _e( 'There are no posts!', 'nasio');
                     endif;
                     ?>
                     </div>

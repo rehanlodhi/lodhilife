@@ -8,7 +8,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Lodhi Life
+ * @subpackage Nasio
  * @since 1.0
  * @version 1.0
  */
@@ -26,7 +26,7 @@ if (post_password_required()) {
 <div class="comment-content">
     <?php if (have_comments()): ?>
     <h3 class="mb-5">
-        <?php printf(__('Comments', 'lodhilife')); ?>
+        <?php printf(__('Comments', 'nasio')); ?>
     </h3>
 
     <?php the_comments_navigation();?>
@@ -49,11 +49,11 @@ if (post_password_required()) {
     comment_form(array(
         'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title">',
         'title_reply_after' => '</h3>',
-        'title_reply' => __('Leave a Comment', 'lodhilife'),
+        'title_reply' => __('Leave a Comment', 'nasio'),
         'class_submit' => 'btn btn-primary',
-        'label_submit' => __('Submit Query', 'lodhilife'),
+        'label_submit' => __('Submit Query', 'nasio'),
         'comment_field' => '<p class="comment-form-comment">' .
-        '<label for="comment">' . __('Message', 'lodhilife') . '</label>' .
+        '<label for="comment">' . __('Message', 'nasio') . '</label>' .
         '<textarea id="comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true"></textarea>' .
         '</p>',
     ));
